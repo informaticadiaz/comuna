@@ -58,11 +58,11 @@ export function CategoriesContextProvider({
     let total = 0;
     if (type === "Expenses") {
       categories.forEach((category) => {
-        if (category.label !== "Budget") total += category.amount;
+        if (category.label !== "Ingresos") total += category.amount;
       });
     } else {
       categories.forEach((category) => {
-        if (category.label === "Budget") total += category.amount;
+        if (category.label === "Ingresos") total += category.amount;
       });
     }
     return total;
@@ -73,12 +73,12 @@ export function CategoriesContextProvider({
       const arr: Category[] = JSON.parse(JSON.stringify(prev));
       const arr2: Category[] = [];
       arr.forEach((c) => {
-        if (type === "Budget") {
-          if (c.label !== "Budget") {
+        if (type === "Ingresos") {
+          if (c.label !== "Ingresos") {
             arr2.push(c);
           }
         } else {
-          if (c.label === "Budget") {
+          if (c.label === "Ingresos") {
             arr2.push(c);
           }
         }

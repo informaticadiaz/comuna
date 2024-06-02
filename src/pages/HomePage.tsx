@@ -8,7 +8,7 @@ import CategoriesContext from "../store/CategoriesContext";
 
 const HomePage = () => {
   const { getTotalAmount } = useContext(CategoriesContext);
-  const budget = getTotalAmount("Budget");
+  const budget = getTotalAmount("Ingresos");
   const expenses = getTotalAmount("Expenses");
 
   return (

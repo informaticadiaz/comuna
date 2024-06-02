@@ -50,12 +50,12 @@ function drawPie({ context, data }: drawPieArgs) {
 const PieChart = () => {
   const { getTotalAmount } = useContext(CategoriesContext);
   const expenses = getTotalAmount("Expenses");
-  const budget = getTotalAmount("Budget");
+  const budget = getTotalAmount("Ingresos");
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const data = [
     {
-      type: "Budget",
+      type: "Ingresos",
       amount: budget,
       color: "#4BDB6B",
     },

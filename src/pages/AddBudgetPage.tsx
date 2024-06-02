@@ -8,7 +8,7 @@ import CategoriesContext from "../store/CategoriesContext";
 
 const AddBudgetPage = () => {
   const { getTotalAmount } = useContext(CategoriesContext);
-  const budget = getTotalAmount("Budget");
+  const budget = getTotalAmount("Ingresos");
 
   return (
     <PageContainer>
@@ -64,7 +64,7 @@ const AddBudgetPage = () => {
       </Text>
       <AddToBudget />
       <Divider mt={30} mb={20} />
-      <ResetValueModal prevAmount={budget} type="Budget" />
+      <ResetValueModal prevAmount={budget} type="Ingresos" />
     </PageContainer>
   );
 };

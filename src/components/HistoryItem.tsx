@@ -22,7 +22,7 @@ const HistoryItem = ({
   const [opened, setOpened] = useState(false);
   // #69DB7C is green.4 and #FF8787 is red.4.
   const color =
-    type === "Budget" || type === "Expenses Reset" ? "#69DB7C" : "#FF8787";
+    type === "Ingresos" || type === "Expenses Reset" ? "#69DB7C" : "#FF8787";
 
   return (
     <>
@@ -55,7 +55,7 @@ const HistoryItem = ({
         </Text>
         <Text size={15} color={color} weight={500}>
           {/* Display the correct sign based on the type of transaction */}
-          {type === "Budget" || type === "Expenses Reset" ? "+" : "-"}$
+          {type === "Ingresos" || type === "Expenses Reset" ? "+" : "-"}$
           {amount.toLocaleString("en-US")}
         </Text>
       </Card>

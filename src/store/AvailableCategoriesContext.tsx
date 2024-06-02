@@ -42,7 +42,11 @@ export function AvailableCategoriesContextProvider({
         value: "Higene",
         isused: "false",
       },
-      { label: "Servicios", value: "Servicios", isused: "false" },
+      { 
+        label: "Servicios", 
+        value: "Servicios", 
+        isused: "false" 
+      },
     ],
   });
 

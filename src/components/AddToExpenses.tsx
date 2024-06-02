@@ -90,7 +90,7 @@ const AddToExpenses = () => {
           onClick={() => {
             if (label === "" || value <= 0 || Number.isNaN(value)) {
               alert(
-                "Invalid Entries. Make sure the label is not empty and the amount is greater than zero."
+                "Datos Invalidos. Ingrese el mes y el valor del gasto."
               );
             } else {
               // if the user does not select a category while creating his expense, set category equal to 'Uncatigorized'

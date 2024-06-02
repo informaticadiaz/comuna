@@ -26,16 +26,16 @@ const SetBudget = () => {
         onClick={() => {
           // checks that the user inputted valid values
           if (value <= 0 || Number.isNaN(value)) {
-            alert("Invalid Entry. Make sure the amount is greater than zero.");
+            alert("Datos Invalidos. Ingrese el mes y el valor del gasto.");
           } else {
-            const budget = getTotalAmount("Budget");
+            const budget = getTotalAmount("Ingresos");
             addCategory({
-              label: "Budget",
+              label: "Ingresos",
               id: crypto.randomUUID(),
               amount: -1*budget,
             });
             addCategory({
-              label: "Budget",
+              label: "Ingresos",
               id: crypto.randomUUID(),
               amount: value,
             });
@@ -45,9 +45,9 @@ const SetBudget = () => {
               label: "Budget has been set to $" + value,
               id: crypto.randomUUID(),
               amount: value,
-              type: "Budget",
+              type: "Ingresos",
               dateCreated: "", // dateCreated passes an empty string here as the actual date creation is handled in the addHisotyrElement function
-              category: "Budget",
+              category: "Ingresos",
             });
           }
         }}

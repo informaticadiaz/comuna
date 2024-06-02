@@ -88,7 +88,7 @@ const HistoryModal = ({
               });
             } else if (type === "Budget Reset") {
               addCategory({
-                label: "Budget",
+                label: "Ingresos",
                 amount: amount,
                 id: crypto.randomUUID(),
               });

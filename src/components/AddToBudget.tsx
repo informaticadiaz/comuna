@@ -41,7 +41,7 @@ const AddToBudget = () => {
             );
           } else {
             addCategory({
-              label: "Budget",
+              label: "Ingresos",
               id: crypto.randomUUID(),
               amount: value,
             });
@@ -51,9 +51,9 @@ const AddToBudget = () => {
               label: label,
               amount: value,
               id: crypto.randomUUID(),
-              type: "Budget",
+              type: "Ingresos",
               dateCreated: "",
-              category: "Budget",
+              category: "Ingresos",
             });
           }
         }}

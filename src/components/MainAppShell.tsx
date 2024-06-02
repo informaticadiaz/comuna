@@ -87,7 +87,7 @@ const MainAppShell = () => {
                   link="/newBudget"
                 />
                 <NavigationLink
-                  label="Ver Gastos por Categorias"
+                  label="Ver Gastos"
                   icon={<BsBarChartLine />}
                   link="/categories"
                 />

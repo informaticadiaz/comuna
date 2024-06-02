@@ -84,8 +84,7 @@ const ResetValueModal = ({ type, prevAmount }: ResetValueModalProps) => {
           <Button onClick={() => setOpened(false)}>Cancel</Button>
         </div>
       </Modal>
-{/*
-
+    {/*
       <Flex mt={20} direction="column" justify="flex-start" align="flex-start">
         <Text
           size="xl"

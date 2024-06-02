@@ -11,6 +11,31 @@ const AddToBudget = () => {
   const [label, setLabel] = useState("");
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
+  const handleAddCategory = () => {
+    if (!isValidInput(label, value)) {
+      alert("Datos invalidos. Ingrese nombre y valor del gasto.");
+    } else {
+      addCategory({
+        label: "Ingresos",
+        id: crypto.randomUUID(),
+        amount: value,
+      });
+      navigate("/");
+      addHistoryElement({
+        label,
+        amount: value,
+        id: crypto.randomUUID(),
+        type: "Ingresos",
+        dateCreated: "",
+        category: "Ingresos",
+      });
+    }
+  };
+  
+  const isValidInput = (label: string, value: number) => {
+    return label !== "" && value > 0 && !Number.isNaN(value);
+  };
+
   return (
     <div>
       <TextInput
@@ -31,33 +56,7 @@ const AddToBudget = () => {
         label="Monto"
         withAsterisk
       />
-      <Button
-        mt={20}
-        onClick={() => {
-          // Checks if the user input is valid
-          if (label === "" || value <= 0 || Number.isNaN(value)) {
-            alert(
-              "Datos invalidos. Ingrese nombre y valor del gasto."
-            );
-          } else {
-            addCategory({
-              label: "Ingresos",
-              id: crypto.randomUUID(),
-              amount: value,
-            });
-            // navigate to home page
-            navigate("/");
-            addHistoryElement({
-              label: label,
-              amount: value,
-              id: crypto.randomUUID(),
-              type: "Ingresos",
-              dateCreated: "",
-              category: "Ingresos",
-            });
-          }
-        }}
-      >
+      <Button mt={20} onClick={handleAddCategory} >
         Agregar
       </Button>
     </div>

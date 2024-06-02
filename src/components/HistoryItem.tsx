@@ -54,9 +54,7 @@ const HistoryItem = ({
           {label.length > 44 ? label.slice(0, 44) + "..." : label}
         </Text>
         <Text size={15} color={color} weight={500}>
-          {/* Display the correct sign based on the type of transaction */}
-          {type === "Ingresos" || type === "Expenses Reset" ? "+" : "-"}$
-          {amount.toLocaleString("en-US")}
+          {type === "income" ? "+" : "-"} {amount.toLocaleString("en-US")}
         </Text>
       </Card>
     </>

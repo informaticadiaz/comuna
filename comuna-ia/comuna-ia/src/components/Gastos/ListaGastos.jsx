@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { GastosContext } from '../../Context';
+import DataGastos from './DataGastos';
 import Layout from '../../Layout/Layout';
 export default function ListaGastos() {
   const { gastos } = useContext(GastosContext);
 
   return (
-    <Layout>
-      <h2>Lista de Registros de Gastos</h2>
+    <>
+      <h2>Gastos</h2>
       {gastos.length === 0 ? (
         <p>No hay registros de gastos.</p>
       ) : (
@@ -20,7 +21,8 @@ export default function ListaGastos() {
           ))}
         </ul>
       )}
-    
-    </Layout>
+    <DataGastos />
+    <Layout />
+      </>
   );
 }

@@ -1,7 +1,8 @@
 import { useContext, useEffect } from 'react';
 import { GastosContext } from '../../Context';
-import { Link } from 'react-router-dom';
+import DataIngresos from './DataIngresos';
 import Layout from '../../Layout/Layout';
+
 export default function ListaIngresos() {
   const { ingresos } = useContext(GastosContext);
   useEffect(() => {
@@ -10,14 +11,8 @@ export default function ListaIngresos() {
 
     console.log(ingresos)
   return (
-    <Layout>
-    <div>
-      <li>
-      <ul><Link to="/">App</Link></ul>
-      <ul><Link to="/nuevo-ingreso">Nuevo Ingreso</Link></ul>
-      <ul><Link to="/lista-ingreso">Lista Ingreos</Link></ul>
-    </li>
-      <h2>Lista de Registros de Ingresos</h2>
+    <>
+      <h2>Ingresos</h2>
       {ingresos.length === 0 ? (
         <p>No hay registros de Ingresos.</p>
       ) : (
@@ -30,8 +25,9 @@ export default function ListaIngresos() {
             </li>
           ))}
         </ul>
-      )}
-    </div>
-    </Layout>
+      )}    
+      <DataIngresos />
+      <Layout />
+      </>
   );
 }

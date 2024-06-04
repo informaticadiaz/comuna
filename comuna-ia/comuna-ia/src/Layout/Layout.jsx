@@ -19,9 +19,10 @@ export default function Layout() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction component={Link} to="/" label="Ingresos" icon={<AddShoppingCartIcon />} />
+        <BottomNavigationAction component={Link} to="/" label="Home" icon={<AddShoppingCartIcon />} />
+        <BottomNavigationAction component={Link} to="/lista-ingresos" label="Ingresos" icon={<AddShoppingCartIcon />} />
         <BottomNavigationAction component={Link} to="/lista-gastos" label="Gastos" icon={<ShoppingCartCheckoutIcon />} />
-        <BottomNavigationAction component={Link} to="/lista-ingresos" label="Caja" icon={<AttachMoneyIcon />} />
+        <BottomNavigationAction component={Link} to="/caja" label="Caja" icon={<AttachMoneyIcon />} />
       </BottomNavigation>
     </Box>
 )

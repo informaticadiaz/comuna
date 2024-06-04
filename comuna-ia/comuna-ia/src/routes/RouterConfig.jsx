@@ -4,6 +4,7 @@ import FormGastos from '../components/Gastos/FormGastos'
 import ListaGastos from '../components/Gastos/ListaGastos'
 import FormIngresos from "../components/Ingresos/FormIngresos";
 import ListaIngresos from "../components/Ingresos/ListaIngresos";
+import Caja from "../components/Caja/Caja";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/lista-ingresos",
     element: <ListaIngresos />,
+  },
+  {
+    path: "/caja",
+    element: <Caja />,
   }
 ]);
 
